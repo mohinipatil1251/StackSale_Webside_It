@@ -1,0 +1,96 @@
+﻿@{
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2 class="mb-4">Welcome Admin 👋</h2>
+
+<div class="row g-4">
+
+    <div class="col-md-4">
+
+        <div class="card shadow border-0 rounded-4">
+
+            <div class="card-body text-center">
+
+                <h1>📩</h1>
+
+                <h4>Contact Messages</h4>
+
+                <p>
+                    View all messages received from the website.
+                </p>
+
+                <a asp-controller="Admin"
+                   asp-action="ContactMessages"
+                   class="btn btn-primary w-100">
+
+                    View Messages
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-4">
+
+        <div class="card shadow border-0 rounded-4">
+
+            <div class="card-body text-center">
+
+                <h1>💻</h1>
+
+                <h4>Manage Services</h4>
+
+                <p>
+                    Add, Edit and Delete Company Services.
+                </p>
+
+                <a asp-controller="Service"
+                   asp-action="AdminIndex"
+                   class="btn btn-success w-100">
+
+                    Manage Services
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="col-md-4">
+
+        <div class="card shadow border-0 rounded-4">
+
+            <div class="card-body text-center">
+
+                <h1>🌐</h1>
+
+                <h4>Open Website</h4>
+
+                <p>
+                    Visit the public website.
+                </p>
+
+                <a asp-controller="Home"
+                   asp-action="Index"
+                   class="btn btn-warning w-100">
+
+                    Open Website
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

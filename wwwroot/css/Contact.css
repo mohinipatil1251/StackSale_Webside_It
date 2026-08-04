@@ -1,0 +1,183 @@
+﻿
+
+
+
+
+
+
+
+    .company-details h2 {
+        color: #0b1f8f;
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .company-details p {
+        color: #555;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+
+.info {
+    margin-bottom: 22px;
+}
+
+    .info h4 {
+        color: #0b1f8f;
+        margin-bottom: 8px;
+        font-size: 22px;
+    }
+
+    .info span {
+        color: #444;
+        font-size: 18px;
+    }
+
+
+
+
+
+
+/* Two columns */
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #0b1f8f;
+    }
+
+
+
+    .send-btn:hover {
+        background: #FFD700;
+        color: #0b1f8f;
+    }
+
+.contact-section {
+    margin: 60px 0 30px;
+}
+
+.company-card,
+.contact-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    height: 100%;
+}
+
+    .company-card h2,
+    .contact-card h2 {
+        color: #0b1f8f;
+        margin-bottom: 20px;
+        font-size: 34px;
+    }
+
+    .company-card > p {
+        color: #666;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+
+.info-box {
+    margin-bottom: 25px;
+}
+
+    .info-box h5 {
+        color: #0b1f8f;
+        margin-bottom: 8px;
+    }
+
+    .info-box p {
+        margin: 0;
+        color: #555;
+    }
+
+.form-control {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+    .form-control:focus {
+        border-color: #0b1f8f;
+        box-shadow: none;
+    }
+
+textarea {
+    resize: none;
+}
+
+.send-btn {
+    background: #0b1f8f;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: .3s;
+}
+
+    .send-btn:hover {
+        background: #FFD700;
+        color: #0b1f8f;
+    }
+
+/* ===========================
+   GOOGLE MAP
+=========================== */
+
+.map-section {
+    width: 95%;
+    margin: 20px auto 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-card {
+    width: 75%; /* Card ची width कमी */
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+    .map-card h2 {
+        text-align: center;
+        color: #0b1f8f;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .map-card iframe {
+        width: 100%;
+        height: 250px; /* Map ची height कमी */
+        border: none;
+        border-radius: 15px;
+    }

@@ -1,0 +1,71 @@
+﻿@model IT_Company_web.Models.Service
+
+@{
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+    ViewData["Title"] = "Edit Service";
+}
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-warning text-dark">
+
+            <h3>Edit Service</h3>
+
+        </div>
+
+        <div class="card-body">
+
+            <form asp-action="Edit" method="post">
+
+                <input asp-for="Id" type="hidden" />
+
+                <div class="mb-3">
+
+                    <label class="form-label">Service Name</label>
+
+                    <input asp-for="ServiceName" class="form-control" />
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">Description</label>
+
+                    <textarea asp-for="Description"
+                              class="form-control"
+                              rows="4"></textarea>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">Image Name</label>
+
+                    <input asp-for="Image"
+                           class="form-control" />
+
+                </div>
+
+                <button type="submit"
+                        class="btn btn-success">
+
+                    Update Service
+
+                </button>
+
+                <a asp-action="AdminIndex"
+                   class="btn btn-secondary">
+
+                    Cancel
+
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
