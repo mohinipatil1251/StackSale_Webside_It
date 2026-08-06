@@ -1,30 +1,53 @@
-﻿<nav class="navbar">
+﻿
 
-    <div class="logo-section">
 
-        <img src="~/Image/StackSale logo.jpeg" class="nav-logo" alt="StackSale Logo" />
 
-        <div class="company-info">
-            <h2>StackSale</h2>
-            <p>Transforming Ideas Into Reality</p>
+
+<nav class="navbar" id="mainNavbar">
+
+    <div class="navbar-inner">
+
+        <div class="logo-section">
+
+            <a asp-controller="Home" asp-action="Index" class="logo-link">
+                <img src="~/Image/stacksale logo.jpeg" class="nav-logo" alt="StackSale Logo" />
+
+                <div class="company-info">
+                    <h2>StackSale</h2>
+                    <p>Transforming Ideas Into Reality</p>
+                </div>
+            </a>
+
         </div>
+
+        <button type="button"
+                class="nav-toggle"
+                id="navToggle"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+
+            <li><a asp-controller="About" asp-action="Index">About</a></li>
+
+            <li><a asp-controller="Service" asp-action="Index">Services</a></li>
+
+            <li><a asp-controller="Portfolio" asp-action="Index">Portfolio</a></li>
+
+            <li><a asp-controller="Careers" asp-action="Index">Careers</a></li>
+
+            <li><a asp-controller="Home" asp-action="Contact" class="nav-cta">Contact</a></li>
+
+        </ul>
 
     </div>
 
-    <ul class="nav-links">
-
-        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-
-        <li><a asp-controller="About" asp-action="Index">About</a></li>
-
-        <li><a asp-controller="Service" asp-action="Index">Services</a></li>
-
-        <li><a asp-controller="Portfolio" asp-action="Index">Portfolio</a></li>
-
-        <li><a asp-controller="Careers" asp-action="Index">Careers</a></li>
-
-        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
-
-    </ul>
-
 </nav>
+<div class="nav-backdrop" id="navBackdrop"></div>

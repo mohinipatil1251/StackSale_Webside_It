@@ -1,10 +1,16 @@
 using IT_Company_web.Data;
 using Microsoft.EntityFrameworkCore;
+using IT_Company_web.Interface;
+using IT_Company_web.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Register the service repository
+builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 
 // Register Database Context
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
