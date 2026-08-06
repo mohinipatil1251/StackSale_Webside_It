@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using IT_Company_web.Interface;
 using IT_Company_web.Repository;
 
+
+Environment.SetEnvironmentVariable("DOTNET_USE_POLLING_FILE_WATCHER", "true");
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
