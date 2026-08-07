@@ -18,8 +18,9 @@ namespace IT_Company_web.Controllers
         // =====================================
         public IActionResult Index()
         {
-            var careers = _context.Careers.ToList();
-            return View(careers);
+            //  var careers = _context.Careers.ToList();
+            // return View(careers);
+            return View();
         }
 
         // =====================================
