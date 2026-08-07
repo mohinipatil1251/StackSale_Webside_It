@@ -17,7 +17,8 @@
 
     <div class="cards">
 
-        @if (Model.Any())
+       
+            @if (Model != null && Model.Any())
         {
             @foreach (var item in Model)
             {
