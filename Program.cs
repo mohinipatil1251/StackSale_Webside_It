@@ -4,7 +4,6 @@ using IT_Company_web.Interface;
 using IT_Company_web.Repository;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
-
 Environment.SetEnvironmentVariable("DOTNET_USE_POLLING_FILE_WATCHER", "true");
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,8 +17,14 @@ builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 
 // Register Database Context
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    var connectionString =
+        builder.Configuration.GetConnectionString("DefaultConnection");
+
+    options.UseMySql(
+        connectionString,
+        ServerVersion.AutoDetect(connectionString));
+});
 
 var app = builder.Build();
 
