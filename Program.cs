@@ -2,6 +2,7 @@ using IT_Company_web.Data;
 using Microsoft.EntityFrameworkCore;
 using IT_Company_web.Interface;
 using IT_Company_web.Repository;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 
 Environment.SetEnvironmentVariable("DOTNET_USE_POLLING_FILE_WATCHER", "true");
