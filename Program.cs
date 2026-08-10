@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using IT_Company_web.Interface;
 using IT_Company_web.Repository;
 
-// Render Docker मध्ये file watcher साठी
+
 
 var builder = WebApplication.CreateBuilder(args);
 
