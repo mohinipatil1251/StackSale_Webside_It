@@ -2,33 +2,34 @@ using IT_Company_web.Data;
 using Microsoft.EntityFrameworkCore;
 using IT_Company_web.Interface;
 using IT_Company_web.Repository;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
-Environment.SetEnvironmentVariable("DOTNET_USE_POLLING_FILE_WATCHER", "true");
+// Render Docker मध्ये file watcher साठी
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+Environment.SetEnvironmentVariable(
+    "DOTNET_USE_POLLING_FILE_WATCHER",
+    "true");
+
+// Add services to the container
 builder.Services.AddControllersWithViews();
 
-// Register the service repository
+// Register repositories
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 
-// Register Database Context
+// Register SQL Server Database Context
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     var connectionString =
         builder.Configuration.GetConnectionString("DefaultConnection");
 
-    options.UseMySql(
-        connectionString,
-        ServerVersion.AutoDetect(connectionString));
+    options.UseSqlServer(connectionString);
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -36,6 +37,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseStaticFiles();
 
 app.UseRouting();
